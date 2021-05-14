@@ -20,6 +20,9 @@ html, body{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #navbar{
@@ -126,3 +129,26 @@ html, body{
     border: none;
     color: white;
 }
+
+.menu{
+    height: 100%;
+    width: 75%;
+    background-color: rgb(0,0,0,0.5);
+    overflow: scroll;
+}
+
+.menuTitle{
+    height: 10%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.menuDisplay{
+    width: auto;
+}
+
