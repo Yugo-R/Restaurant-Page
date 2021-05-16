@@ -101,7 +101,7 @@ function createMenu(){
         let sushiName = document.createElement('span')
         sushiName.className = `sushiPrice`;
 
-        sushiName.innerText = `${sushiMenu[i][0].toUpperCase() + sushiMenu[i].slice(1)} 100 yens`;
+        sushiName.innerText = `${sushiMenu[i][0].toUpperCase() + sushiMenu[i].slice(1)} 100 yen`;
 
         grid.appendChild(img);
         grid.appendChild(sushiName);
