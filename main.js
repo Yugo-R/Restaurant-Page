@@ -121,11 +121,17 @@ function createMenu(){
 
 //Close overlay window for mobile navigation
 function closeOverlay(overlay){
-        overlay.classList.remove('active');
+        overlay.classList.add('out');
 
-        while(overlay.firstChild){
-            overlay.removeChild(overlay.firstChild);
+        setTimeout(function(){ 
+            overlay.classList.remove('active');
+            overlay.classList.remove('out');
+
+            while(overlay.firstChild){
+                overlay.removeChild(overlay.firstChild);
         }
+        }, 500);
+        
 }
 
 function clearContent(){
