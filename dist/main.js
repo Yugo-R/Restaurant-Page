@@ -1,10 +1,10 @@
 const content = document.querySelector('#content');
 
-
-//on page loadup
-// window.addEventListener('load', ()=>{
-//     homePage();
-// })
+//On page load up//
+window.addEventListener('load', ()=>{
+    clearContent();
+    createHome();
+})
 
 
 //create navpage and delete
@@ -40,14 +40,19 @@ document.querySelector('.nav-button').addEventListener('click', ()=>{
     ul.onclick = function(event){
         let target = event.target;
         if(target.innerText == 'Home'){
-            homePage();
+            clearContent();
+            createHome();
+            closeOverlay(overlay);
+        }
+        if(target.innerText == 'Menu'){
+            clearContent();
+            createMenu();
             closeOverlay(overlay);
         }
     }
 })
-
 //Create home page
-function homePage(){
+function createHome(){
     let sushiHome = document.createElement('div')
     sushiHome.className = 'sushiHome';
 
@@ -62,6 +67,56 @@ function homePage(){
     sushiHome.appendChild(homeTitle);
     sushiHome.appendChild(homeBtn);
     content.appendChild(sushiHome);
+
+    let menuBtn = document.querySelector('.menuBtn')
+    menuBtn.addEventListener('click', ()=>{
+        clearContent();
+        requestAnimationFrame(()=>{
+            createMenu();
+        })
+});
+}
+
+//Create the menu page
+function createMenu(){
+    let sushiMenu = ['maguro','ikura', 'salmon', 'ika', 'ebi', 'hotate'];
+
+    let menu = document.createElement('div');
+    menu.className = 'menu';
+
+    let menuTitle = document.createElement('div');
+    menuTitle.className = 'menuTitle';
+    menuTitle.innerText = '- Menu -';
+
+    let menuDisplay = document.createElement('div');
+    menuDisplay.className = 'menuDisplay';
+
+    for(let i = 0; i < sushiMenu.length; i++){
+        let grid = document.createElement('div')
+        grid.className = 'grid';
+
+        let img = document.createElement('img');
+        img.src = `/img/${sushiMenu[i]}.png`;
+
+        let sushiName = document.createElement('span')
+        sushiName.className = `sushiPrice`;
+
+        sushiName.innerText = `${sushiMenu[i][0].toUpperCase() + sushiMenu[i].slice(1)} 100 yens`;
+
+        grid.appendChild(img);
+        grid.appendChild(sushiName);
+        menuDisplay.appendChild(grid);
+    }
+
+    menu.appendChild(menuTitle);
+    menu.appendChild(menuDisplay);
+    content.appendChild(menu);
+
+    //animate dynamically created page
+    requestAnimationFrame(()=>{
+        menu.style.opacity = 1;
+    })
+    
 }
 
 //Close overlay window for mobile navigation
@@ -71,4 +126,10 @@ function closeOverlay(overlay){
         while(overlay.firstChild){
             overlay.removeChild(overlay.firstChild);
         }
+}
+
+function clearContent(){
+    while(content.firstChild){
+        content.removeChild(content.firstChild);
+    }
 }
