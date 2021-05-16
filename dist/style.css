@@ -61,13 +61,24 @@ html, body{
     background-color: black;
 }
 
+.navbarOverlay.active.out{
+    animation: slide-out 1.5s;
+}
+
+@keyframes slide-out {
+    0% {top:0; right:0; bottom:0 ; left:0;};
+    50% {left: 50%;}
+    70% {left: 150%;}
+    100% {left:200%; top: 0;};
+}
+
 .navbarOverlay.active{
     position: fixed;
     background-color: black;
     height: 100%;
     width: 100%;
     z-index: 10;
-    animation: slide 3s forwards;
+    animation: slide 1.5s forwards;
 }
 
 @keyframes slide {
