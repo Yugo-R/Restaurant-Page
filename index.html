@@ -16,10 +16,30 @@
            </div>
        </div>
         <div id="content">
+            <div class="contactPage">
+                <div class="contactTitle">
+                    Contacts
+                </div>
+                <div class="contact">
+                    <form>
+                        <label for="fname">First name</label>
+                        <input type="text" id="fname" placeholder="First" required>
+                        <label for="lname">Last name</label>
+                        <input type="text" id="lname" placeholder="Last" required>
+                        <label for="mail">Email</label>
+                        <input type="email" required>
+                        <input type="submit">
+                    </form>
+                </div>
+                <div id="map"></div>
+            </div>
         </div>
         <div class="navbarOverlay">
         </div>
         <script src="main.js"></script>
+        <script async
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDGy2YYuR4sVRMIv-X_OsuFfl3tZfsFM_4&callback=initMap">
+        </script>
     </body>
     <div class="head"></div>
 </html>

@@ -189,3 +189,49 @@ html, body{
 .sushiPrice{
     color: white;
 }
+
+.contactPage{
+    height: 85%;
+    width: 85%;
+    background-color: rgb(0,0,0,0.5);
+    display: grid;
+    grid-template-rows: 0.3fr 1fr 1fr;
+}
+
+.map{
+    height: 100%;
+    width: 100%;
+}
+
+.contactTitle{
+    font-size: 35px;
+    justify-self: center;
+    align-self: center;
+    color: white;
+}
+
+.contact{
+    display: flex;
+    justify-content: space-around;
+}
+
+.contact form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+}
+
+.contact form label{
+    color: white;
+    font-size: 20px;
+}
+
+.contact input{
+    height: 20px;
+}
+
+.contact form input[type=submit]{ 
+    width: 50%;
+    align-self: center;
+}
