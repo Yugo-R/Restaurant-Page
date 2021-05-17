@@ -2,17 +2,17 @@ const content = document.querySelector('#content');
 
 //On page load up//
 window.addEventListener('load', ()=>{
-    clearContent();
-    createHome();
+    // createHome();
+    createMap();
 })
 
 
-//create navpage and delete
+//create navpage
 document.querySelector('.nav-button').addEventListener('click', ()=>{
     let overlay = document.querySelector('.navbarOverlay');
     overlay.classList.add('active');
     let ul = document.createElement('ul');
-    let navlist = ['Home', 'Menu', 'Contact']
+    let navlist = ['Home', 'Menu', 'Contacts']
 
     for(let i = 0; i < navlist.length; i++){
         let li = document.createElement('li');
@@ -119,7 +119,25 @@ function createMenu(){
     
 }
 
-//Close overlay window for mobile navigation
+//Create contact page
+function createContact(){
+
+}
+
+function createMap(){
+    let tokyo = {lat:35.68064724779705, lng:139.7672043445679};
+    let map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 4,
+        center: tokyo,
+      });
+    // The marker, positioned at Tokyo
+    let marker = new google.maps.Marker({
+        position: tokyo,
+        map: map,
+    });
+}
+
+//Close overlay window
 function closeOverlay(overlay){
         overlay.classList.add('out');
 
