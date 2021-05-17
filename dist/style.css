@@ -195,13 +195,10 @@ html, body{
     width: 85%;
     background-color: rgb(0,0,0,0.5);
     display: grid;
-    grid-template-rows: 0.3fr 1fr 1fr;
+    grid-template-rows: 0.3fr 1.5fr 0.3fr 1.5fr;
 }
 
-.map{
-    height: 100%;
-    width: 100%;
-}
+
 
 .contactTitle{
     font-size: 35px;
@@ -234,4 +231,13 @@ html, body{
 .contact form input[type=submit]{ 
     width: 50%;
     align-self: center;
+}
+
+.locationMap{
+   display: flex;
+}
+
+#map{
+    flex-grow: 1;
+    height: 150px;
 }

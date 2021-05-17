@@ -127,7 +127,7 @@ function createContact(){
 function createMap(){
     let tokyo = {lat:35.68064724779705, lng:139.7672043445679};
     let map = new google.maps.Map(document.getElementById("map"), {
-        zoom: 4,
+        zoom: 8,
         center: tokyo,
       });
     // The marker, positioned at Tokyo
