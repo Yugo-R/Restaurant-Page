@@ -14,13 +14,6 @@ function createHome(){
     sushiHome.appendChild(homeTitle);
     sushiHome.appendChild(homeBtn);
 
-//     let menuBtn = document.querySelector('.menuBtn')
-//     menuBtn.addEventListener('click', ()=>{
-//         clearContent();
-//         requestAnimationFrame(()=>{
-//             createMenu();
-//         })
-// });
     return sushiHome;
 }
 

@@ -7,6 +7,13 @@ const content = document.querySelector('#content');
 //On page load up//
 window.addEventListener('load', ()=>{
     content.appendChild(createHome());
+    let menuBtn = document.querySelector('.menuBtn')
+    menuBtn.addEventListener('click', ()=>{
+        clearContent();
+        requestAnimationFrame(()=>{
+            content.appendChild(createMenu());
+        })
+    });
 })
 
 
@@ -45,6 +52,13 @@ document.querySelector('.nav-button').addEventListener('click', ()=>{
         if(target.innerText == 'Home'){
             clearContent();
             content.appendChild(createHome());
+            let menuBtn = document.querySelector('.menuBtn')
+            menuBtn.addEventListener('click', ()=>{
+                clearContent();
+                requestAnimationFrame(()=>{
+                content.appendChild(createMenu());
+                })
+             });
             closeOverlay(overlay);
         }
         if(target.innerText == 'Menu'){
