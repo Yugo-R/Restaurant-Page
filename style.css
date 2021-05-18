@@ -195,7 +195,10 @@ html, body{
     width: 85%;
     background-color: rgb(0,0,0,0.5);
     display: grid;
-    grid-template-rows: 0.3fr 1.5fr 0.3fr 1.5fr;
+    grid-template-rows: 0.3fr 1.5fr 1.5fr;
+    gap: 15px;
+    opacity: 0;
+    transition: 1s ease-in-out;
 }
 
 
@@ -230,8 +233,22 @@ html, body{
 
 .contact form input[type=submit]{ 
     width: 50%;
+    height: 30px;
     align-self: center;
+    margin-top: 15px;
+    color: white;
+    background-color:transparent;
+    border: 2px solid white;
+    cursor: pointer;
 }
+
+.contact form input[type=submit]:hover{ 
+    background-color: wheat;
+    color: black;
+    border: none;
+    font-weight: bold;
+}
+
 
 .locationMap{
    display: flex;
@@ -240,4 +257,5 @@ html, body{
 #map{
     flex-grow: 1;
     height: 150px;
+    margin: 15px;
 }
