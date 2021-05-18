@@ -17,7 +17,7 @@ function createMenu(){
         grid.className = 'grid';
 
         let img = document.createElement('img');
-        img.src = `/img/${sushiMenu[i]}.png`;
+        img.src = `./img/${sushiMenu[i]}.png`;
 
         let sushiName = document.createElement('span')
         sushiName.className = `sushiPrice`;
