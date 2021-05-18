@@ -129,12 +129,12 @@ function createContact(){
     let contactPage = document.createElement('div');
     contactPage.className = "contactPage";
 
-    let title = document.createElement('div');
-    title.className = "contactTitle"
-    title.innerText = "Contacts";
-
     let contact = document.createElement('div');
     contact.className = "contact";
+
+    let title = document.createElement('span');
+    title.className = "contactTitle"
+    title.innerText = "Contacts";
 
     let form = document.createElement('form');
 
@@ -178,6 +178,7 @@ function createContact(){
     form.appendChild(mail);
     form.appendChild(sub);
 
+    contact.appendChild(title);
     contact.appendChild(form);
 
     //Location map div
@@ -190,7 +191,6 @@ function createContact(){
 
     createMap(map);
 
-    contactPage.appendChild(title);
     contactPage.appendChild(contact);
     contactPage.appendChild(location);
 

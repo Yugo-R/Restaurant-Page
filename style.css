@@ -195,7 +195,7 @@ html, body{
     width: 85%;
     background-color: rgb(0,0,0,0.5);
     display: grid;
-    grid-template-rows: 0.3fr 1.5fr 1.5fr;
+    grid-template-rows: 1.5fr 1.5fr;
     gap: 15px;
     opacity: 0;
     transition: 1s ease-in-out;
@@ -212,6 +212,7 @@ html, body{
 
 .contact{
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
 }
 
@@ -259,3 +260,151 @@ html, body{
     height: 150px;
     margin: 15px;
 }
+
+@media only screen and (min-height:280px) and (max-height:414px){
+
+    #content{
+        height: 85%;
+    }
+
+    /* overlay */
+    .navbarOverlay ul{
+        margin-top: 15px;
+    }
+
+    /* navbar */
+    #navbar{
+        height: 15%;
+    }
+
+    /* menu page */
+    .menu{
+        width: 50%;
+    }
+
+    .menuTitle{
+        font-size: 25px;
+        margin-top: 10px;
+        margin-bottom: 15px;
+    }
+
+    .grid{
+        width: 50%;
+        justify-self: center;
+    }
+
+    /* contact page */
+    .contactPage{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: none;
+    }
+
+    #map{
+        justify-self: center;
+        align-self: center;
+    }
+
+}
+
+@media only screen and (min-width:768px) and (min-height:823px){
+
+    /* navbar */
+    #title{
+        font-size: 40px;
+    }
+
+    .nav-button{
+        margin-right: 20px;
+    }
+
+    .burgerline{
+        height: 4px;
+        width: 75%;
+    }
+
+    /* overlay */
+    .navbarOverlay ul li button{
+        font-size: 35px;
+    
+    }
+
+    .overlayClose{
+        font-size: 35px;
+    }
+
+    /* home page */
+    .homeTitle{
+        font-size: 50px;
+    }
+
+    .menuBtn{
+        font-size: 25px;
+    }
+
+    /* menu page */
+    .menuTitle{
+        font-size: 35px;
+    }
+
+    .grid{
+        width: 50%;
+        justify-self: center;
+    }
+
+    .sushiPrice{
+        font-size: 25px;
+    }
+
+    /* contact page */
+    .contactPage{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: none;
+        height: 45%;
+    }
+
+    .contact{
+        align-self: center;
+        justify-self: center;
+    }
+
+    .contactTitle{
+        margin-bottom: 15px;
+    }
+
+    .contact form{
+        justify-content: flex-start;
+    }
+
+    .contact form input{
+        margin-bottom: 25px;
+        height: 30px;
+        font-size:25px ;
+    }
+
+    .contact form label{
+        font-size: 30px;
+    }
+
+    #map{
+        height: 65%;
+        align-self: center;
+    }
+
+    @media only screen and (min-width:1366px){
+        .grid{
+            width: 25%;
+        }
+
+        .locationMap{
+            display: inherit;
+        }
+
+        #map{
+            flex-grow: inherit;
+            width: 65%;
+            height: 75%;
+            justify-self: center;
+        }
+    }
+}
+
